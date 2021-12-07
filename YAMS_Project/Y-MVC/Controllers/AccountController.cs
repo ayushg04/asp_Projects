@@ -1,4 +1,5 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -34,14 +35,19 @@ namespace Y_MVC.Controllers
             if (token == null)
             {
                 _notyf.Error("Wrong Username or Password", 3);
+                //return Unauthorized();
                 return View();
             }
             _notyf.Success("Successfully Logged In", 3);
-            return RedirectToAction("Home", "Account");
+            //return Ok(token);
+            ViewBag.data = token;
+            return RedirectToAction("Home", "Account",token);
 
         }
+        
         public IActionResult Home()
         {
+            
             return View();
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
