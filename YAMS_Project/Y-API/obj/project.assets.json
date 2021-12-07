@@ -6606,11 +6606,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daffolap-1002\\source\\repos\\YAMS_Project\\Y-API\\Y-API.csproj",
+      "projectUniqueName": "C:\\project\\asp_Projects\\YAMS_Project\\Y-API\\Y-API.csproj",
       "projectName": "Y-API",
-      "projectPath": "C:\\Users\\Daffolap-1002\\source\\repos\\YAMS_Project\\Y-API\\Y-API.csproj",
+      "projectPath": "C:\\project\\asp_Projects\\YAMS_Project\\Y-API\\Y-API.csproj",
       "packagesPath": "C:\\Users\\Daffolap-1002\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daffolap-1002\\source\\repos\\YAMS_Project\\Y-API\\obj\\",
+      "outputPath": "C:\\project\\asp_Projects\\YAMS_Project\\Y-API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
