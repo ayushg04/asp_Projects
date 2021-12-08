@@ -18,13 +18,11 @@ namespace Y_MVC.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly INotyfService _notyf;
         private readonly IJwtAuth jwtAuth;
-        private readonly ITokenManager _tokenManager;
-        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf,ITokenManager tokenManager)
+        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf)
         {
             this.jwtAuth = jwtAuth;
             _logger = logger;
             _notyf = notyf;
-            _tokenManager = tokenManager;
         }
         [HttpGet]
         public IActionResult Login()
@@ -55,8 +53,8 @@ namespace Y_MVC.Controllers
         }
         public IActionResult Logout()
         {
-            deacToken dt = new deacToken(_tokenManager);
-            dt.CancelAccessToken();
+            
+            //dt.CancelAccessToken();
             return RedirectToAction("Login", "Account");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

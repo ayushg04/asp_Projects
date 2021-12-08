@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -33,50 +31,52 @@ namespace Y_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            services.AddLogging();
-            services.AddSingleton<IAccountService, AccountService>();
-            services.AddSingleton<IJwtHandler, JwtHandler>();
-            services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
-            services.AddTransient<TokenManagerMiddleware>();
-            services.AddTransient<ITokenManager, services.TokenManager>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddDistributedRedisCache(r => { r.Configuration = Configuration["redis:connectionString"]; });
-            var jwtSection = Configuration.GetSection("jwt");
-            var jwtOptions = new JwtOptions();
-            jwtSection.Bind(jwtOptions);
-            services.AddAuthentication()
-                .AddJwtBearer(cfg =>
+
+            services.AddScoped<CoreDbContext>();
+            services.AddControllers();
+
+            //services.AddDbContext<CoreDbContext>(op => op.UseSqlServer(Configuration.GetConnectionString("CoreDbContext")));
+            var key = "This is my first test key";
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
-                    cfg.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey)),
-                        ValidIssuer = jwtOptions.Issuer,
-                        ValidateAudience = false,
-                        ValidateLifetime = true
-                    };
-                });
-            services.Configure<JwtOptions>(jwtSection);
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key))
+                };
+            });
+
+            services.AddSingleton<IJwtAuth>(new Auth(key));
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Y_API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            loggerFactory.AddDebug().AddConsole();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Y_API v1"));
             }
-            app.UseMiddleware<ErrorHandlerMiddleware>();
-            app.UseMiddleware<TokenManagerMiddleware>();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
 
             app.UseEndpoints(endpoints =>
             {
