@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -12,21 +13,30 @@ namespace Y_API
 {
     public class Auth : IJwtAuth
     {
-        CoreDbContext cdbc = new CoreDbContext();
+        //CoreDbContext dbContext = new CoreDbContext();
         private readonly string username1 = "ayush";
         private readonly string password1 = "ash123";
         private readonly string key;
+        private readonly ILogger<Auth> _logger;
+        private readonly CoreDbContext _database;
+
         public Auth(string key)
         {
             this.key = key;
         }
+
+        public Auth( ILogger<Auth> logger, CoreDbContext context)
+        {
+            
+            _logger = logger;
+            _database = context;
+        }
         public string Authentication(string username, string password)
         {
-            //bool isValid = cdbc.userTables.Any(x => x.username == username && x.password == password);
+            //bool isValid = _database.userTables.Any(x => x.username == username && x.password == password);
             if(!(username.Equals(username1) && password.Equals(password1)))
+            //if(!isValid)
             {
-                /*var m = loginmodel.username;
-                var k = loginmodel.password;*/
                 return null;
             }
 
@@ -46,7 +56,7 @@ namespace Y_API
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-
+            
             return tokenHandler.WriteToken(token);
         }
 

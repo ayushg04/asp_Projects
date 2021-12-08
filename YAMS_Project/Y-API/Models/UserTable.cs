@@ -8,7 +8,7 @@ namespace Y_API.Models
 {
     public class UserTable
     {
-        public int id { get; set; }
+      //  public int id { get; set; }
         [Required(ErrorMessage ="Name Required")]
         public string username { get; set; }
         [Required(ErrorMessage ="Password Required")]

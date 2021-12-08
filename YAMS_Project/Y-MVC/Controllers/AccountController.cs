@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Y_API;
+using Y_API.Models;
 using Y_MVC.Models;
 
 namespace Y_MVC.Controllers
@@ -17,11 +18,13 @@ namespace Y_MVC.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly INotyfService _notyf;
         private readonly IJwtAuth jwtAuth;
-        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf)
+        private readonly ITokenManager _tokenManager;
+        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf,ITokenManager tokenManager)
         {
             this.jwtAuth = jwtAuth;
             _logger = logger;
             _notyf = notyf;
+            _tokenManager = tokenManager;
         }
         [HttpGet]
         public IActionResult Login()
@@ -44,11 +47,17 @@ namespace Y_MVC.Controllers
             return RedirectToAction("Home", "Account",token);
 
         }
-        
+        [Authorize]
         public IActionResult Home()
         {
-            
+            _notyf.Success("Successfully Logged Out", 3);
             return View();
+        }
+        public IActionResult Logout()
+        {
+            deacToken dt = new deacToken(_tokenManager);
+            dt.CancelAccessToken();
+            return RedirectToAction("Login", "Account");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

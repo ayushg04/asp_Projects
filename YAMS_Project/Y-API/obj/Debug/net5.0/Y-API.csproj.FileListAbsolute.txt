@@ -146,3 +146,9 @@ C:\project\asp_Projects\YAMS_Project\Y-API\obj\Debug\net5.0\Y-API.dll
 C:\project\asp_Projects\YAMS_Project\Y-API\obj\Debug\net5.0\ref\Y-API.dll
 C:\project\asp_Projects\YAMS_Project\Y-API\obj\Debug\net5.0\Y-API.pdb
 C:\project\asp_Projects\YAMS_Project\Y-API\obj\Debug\net5.0\Y-API.genruntimeconfig.cache
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\project\asp_Projects\YAMS_Project\Y-API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

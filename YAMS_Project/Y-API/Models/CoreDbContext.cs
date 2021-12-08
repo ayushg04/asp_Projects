@@ -13,7 +13,7 @@ namespace Y_API.Models
     {
        
         public CoreDbContext()
-            : base("name=CoreDbContext")
+            : base("name=UserDB")
         {
         }
 
