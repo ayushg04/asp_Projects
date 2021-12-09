@@ -1,0 +1,11 @@
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.deps.json
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.dll
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\bin\Debug\net5.0\ref\RepositoryLayer.dll
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.pdb
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.AssemblyInfoInputs.cache
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.AssemblyInfo.cs
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.dll
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\ref\RepositoryLayer.dll
+C:\project\asp_Projects\YAMS_Project\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.pdb

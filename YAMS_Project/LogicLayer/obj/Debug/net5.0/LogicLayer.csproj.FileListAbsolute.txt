@@ -1,0 +1,12 @@
+C:\project\asp_Projects\YAMS_Project\LogicLayer\bin\Debug\net5.0\LogicLayer.deps.json
+C:\project\asp_Projects\YAMS_Project\LogicLayer\bin\Debug\net5.0\LogicLayer.dll
+C:\project\asp_Projects\YAMS_Project\LogicLayer\bin\Debug\net5.0\ref\LogicLayer.dll
+C:\project\asp_Projects\YAMS_Project\LogicLayer\bin\Debug\net5.0\LogicLayer.pdb
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.csproj.AssemblyReference.cache
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.AssemblyInfoInputs.cache
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.AssemblyInfo.cs
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.dll
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\ref\LogicLayer.dll
+C:\project\asp_Projects\YAMS_Project\LogicLayer\obj\Debug\net5.0\LogicLayer.pdb

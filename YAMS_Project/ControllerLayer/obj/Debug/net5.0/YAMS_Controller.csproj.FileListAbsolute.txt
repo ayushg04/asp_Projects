@@ -1,0 +1,5 @@
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\YAMS_Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\YAMS_Controller.AssemblyInfoInputs.cache
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\YAMS_Controller.AssemblyInfo.cs
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\YAMS_Controller.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\YAMS_Controller.csproj.AssemblyReference.cache

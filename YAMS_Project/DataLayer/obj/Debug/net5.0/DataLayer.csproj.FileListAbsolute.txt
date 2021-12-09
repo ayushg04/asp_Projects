@@ -1,0 +1,12 @@
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\DataLayer.deps.json
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\DataLayer.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\ref\DataLayer.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\DataLayer.pdb
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.csproj.AssemblyReference.cache
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfoInputs.cache
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfo.cs
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\ref\DataLayer.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\DataLayer.pdb

@@ -1,0 +1,11 @@
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\bin\Debug\net5.0\ControllerLayer.deps.json
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\bin\Debug\net5.0\ControllerLayer.dll
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\bin\Debug\net5.0\ref\ControllerLayer.dll
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\bin\Debug\net5.0\ControllerLayer.pdb
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.AssemblyInfoInputs.cache
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.AssemblyInfo.cs
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.dll
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ref\ControllerLayer.dll
+C:\project\asp_Projects\YAMS_Project\ControllerLayer\obj\Debug\net5.0\ControllerLayer.pdb
