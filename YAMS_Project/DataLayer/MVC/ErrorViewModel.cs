@@ -1,6 +1,6 @@
 using System;
 
-namespace Y_MVC.Models
+namespace YAMS_Data.MVC
 {
     public class ErrorViewModel
     {

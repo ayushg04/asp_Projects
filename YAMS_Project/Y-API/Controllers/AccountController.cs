@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Y_API.Models;
+using YAMS_Data.API;
+using YAMS_Interface;
 
 namespace Y_API.Controllers
 {

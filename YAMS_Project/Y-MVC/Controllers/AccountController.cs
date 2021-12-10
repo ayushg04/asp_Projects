@@ -7,9 +7,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Y_API;
-using Y_API.Models;
-using Y_MVC.Models;
+using YAMS_Data.MVC;
+using YAMS_Interface;
 
 namespace Y_MVC.Controllers
 {
@@ -45,8 +44,8 @@ namespace Y_MVC.Controllers
             return RedirectToAction("Home", "Account",token);
 
         }
-        [Authorize]
-        public IActionResult Home()
+        
+        public IActionResult Home(LoginModel loginModel)
         {
             _notyf.Success("Successfully Logged Out", 3);
             return View();

@@ -7,18 +7,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Y_API;
-using Y_API.Models;
-using Y_MVC.Models;
+using YAMS_Data.MVC;
+using YAMS_Interface;
 
-namespace Y_MVC.Controllers
+namespace YAMS_Controller.MVC
 {
     public class AccountController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AccountController> _logger;
         private readonly INotyfService _notyf;
         private readonly IJwtAuth jwtAuth;
-        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf)
+        public AccountController(IJwtAuth jwtAuth, ILogger<AccountController> logger, INotyfService notyf)
         {
             this.jwtAuth = jwtAuth;
             _logger = logger;

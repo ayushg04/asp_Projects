@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Y_API
+namespace YAMS_Data.API
 {
     public class Member
     {

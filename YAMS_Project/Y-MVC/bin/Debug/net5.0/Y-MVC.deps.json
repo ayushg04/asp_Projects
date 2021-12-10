@@ -43,14 +43,13 @@
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "MySql.Data": "8.0.27",
           "MySql.Data.EntityFrameworkCore": "8.0.22",
           "MySql.EntityFrameworkCore": "5.0.0",
-          "Swashbuckle.AspNetCore": "5.6.3",
           "System.Data.SqlClient": "4.8.3",
           "System.IdentityModel.Tokens.Jwt": "6.15.0",
-          "Y-API": "1.0.0",
+          "YAMS_Interface": "1.0.0",
+          "YAMS_Logic": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -2314,7 +2313,7 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "Y-API/1.0.0": {
+      "YAMS_Data/1.0.0": {
         "dependencies": {
           "AspNetCoreHero.ToastNotification": "1.1.0",
           "EntityFramework": "6.4.4",
@@ -2333,10 +2332,75 @@
           "System.IdentityModel.Tokens.Jwt": "6.15.0"
         },
         "runtime": {
-          "Y-API.dll": {}
+          "YAMS_Data.dll": {}
         },
         "compile": {
-          "Y-API.dll": {}
+          "YAMS_Data.dll": {}
+        }
+      },
+      "YAMS_Interface/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12"
+        },
+        "runtime": {
+          "YAMS_Interface.dll": {}
+        },
+        "compile": {
+          "YAMS_Interface.dll": {}
+        }
+      },
+      "YAMS_Logic/1.0.0": {
+        "dependencies": {
+          "AspNetCoreHero.ToastNotification": "1.1.0",
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "MySql.Data": "8.0.27",
+          "MySql.Data.EntityFrameworkCore": "8.0.22",
+          "MySql.EntityFrameworkCore": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Data.SqlClient": "4.8.3",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0",
+          "YAMS_Data": "1.0.0",
+          "YAMS_Interface": "1.0.0",
+          "YAMS_Repository": "1.0.0"
+        },
+        "runtime": {
+          "YAMS_Logic.dll": {}
+        },
+        "compile": {
+          "YAMS_Logic.dll": {}
+        }
+      },
+      "YAMS_Repository/1.0.0": {
+        "dependencies": {
+          "AspNetCoreHero.ToastNotification": "1.1.0",
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "MySql.Data": "8.0.27",
+          "MySql.Data.EntityFrameworkCore": "8.0.22",
+          "MySql.EntityFrameworkCore": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Data.SqlClient": "4.8.3",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0",
+          "YAMS_Data": "1.0.0"
+        },
+        "runtime": {
+          "YAMS_Repository.dll": {}
+        },
+        "compile": {
+          "YAMS_Repository.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -5206,7 +5270,22 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "Y-API/1.0.0": {
+    "YAMS_Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YAMS_Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YAMS_Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YAMS_Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

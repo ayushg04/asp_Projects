@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\project\asp_Projects\YAMS_Project\Y-MVC\Views\_ViewImports.cshtml"
-using Y_MVC;
+using YAMS_Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\project\asp_Projects\YAMS_Project\Y-MVC\Views\_ViewImports.cshtml"
-using Y_MVC.Models;
+using YAMS_Data.MVC;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32e5c4a406b61f553ad5001b1207ea64c0881f75", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"60a3ed60d7cf4c10d668a89fb348f38255f6a5e8", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

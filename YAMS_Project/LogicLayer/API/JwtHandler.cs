@@ -7,8 +7,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YAMS_Data.API;
+using YAMS_Interface;
 
-namespace Y_API.Models
+namespace YAMS_Logic.API
 {
     public class JwtHandler : IJwtHandler
     {
@@ -26,7 +28,7 @@ namespace Y_API.Models
             _jwtHeader = new JwtHeader(_signingCredentials);
         }
 
-        public JsonWebToken Create(string username)
+        public YAMS_Data.API.JsonWebToken Create(string username)
         {
             var nowUtc = DateTime.UtcNow;
             var expires = nowUtc.AddMinutes(_options.ExpiryMinutes);
@@ -44,11 +46,16 @@ namespace Y_API.Models
             var jwt = new JwtSecurityToken(_jwtHeader, payload);
             var token = _jwtSecurityTokenHandler.WriteToken(jwt);
 
-            return new JsonWebToken
+            return new YAMS_Data.API.JsonWebToken
             {
                 AccessToken = token,
                 Expires = exp
             };
+        }
+
+        Microsoft.IdentityModel.JsonWebTokens.JsonWebToken IJwtHandler.Create(string username)
+        {
+            throw new NotImplementedException();
         }
     }
 }

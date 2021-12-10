@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Y_API.Models;
-
-namespace Y_API.Controllers
+using YAMS_Data.API;
+using YAMS_Interface;
+namespace YAMS_Controller.API
 {
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AccountController : Controller

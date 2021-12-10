@@ -8,9 +8,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Y_API.Models;
+using YAMS_Interface;
+using YAMS_Repository;
 
-namespace Y_API
+namespace YAMS_Logic.API
 {
     public class Auth : IJwtAuth
     {
@@ -37,9 +38,9 @@ namespace Y_API
 
         public string Authentication(string username, string password)
         {
-            bool isValid = dbContext.userTables.Any(x => x.username == username && x.password == password);
-            //if(!(username.Equals(username1) && password.Equals(password1)))
-            if(!isValid)
+            //bool isValid = dbContext.userTables.Any(x => x.username == username && x.password == password);
+            if(!(username.Equals(username1) && password.Equals(password1)))
+            //if(!isValid)
             {
                 return null;
             }

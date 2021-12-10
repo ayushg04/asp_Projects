@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿/*using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.JsonWebTokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using YAMS_Data.API;
+using YAMS_Interface;
+using YAMS_Logic.API;
 
-namespace Y_API.Models
+namespace YAMS_Logic.API
 {
     public class AccountService : IAccountService
     {
@@ -38,7 +41,7 @@ namespace Y_API.Models
             _users.Add(new User { Username = username, Password = password });
         }
 
-        public JsonWebToken SignIn(string username, string password)
+        public YAMS_Data.API.JsonWebToken SignIn(string username, string password)
         {
             var user = GetUser(username);
             if (user == null)
@@ -50,13 +53,13 @@ namespace Y_API.Models
                 .Replace("+", string.Empty)
                 .Replace("=", string.Empty)
                 .Replace("/", string.Empty);
-            jwt.RefreshToken = refreshToken;
+            jwt.RefreshT.oken = refreshToken;
             _refreshTokens.Add(new RefreshToken { Username = username, Token = refreshToken });
 
             return jwt;
         }
 
-        public JsonWebToken RefreshAccessToken(string token)
+        public YAMS_Data.API.JsonWebToken RefreshAccessToken(string token)
         {
             var refreshToken = GetRefreshToken(token);
             if (refreshToken == null)
@@ -92,5 +95,16 @@ namespace Y_API.Models
 
         private RefreshToken GetRefreshToken(string token)
             => _refreshTokens.SingleOrDefault(x => x.Token == token);
+
+        Microsoft.IdentityModel.JsonWebTokens.JsonWebToken IAccountService.SignIn(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        Microsoft.IdentityModel.JsonWebTokens.JsonWebToken IAccountService.RefreshAccessToken(string token)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
+*/

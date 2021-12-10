@@ -4,10 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using YAMS_Data.API;
+using YAMS_Interface;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Y_API.Controllers
+namespace YAMS_Controller.API
 {
     [Authorize]
     [Route("api/[controller]")]

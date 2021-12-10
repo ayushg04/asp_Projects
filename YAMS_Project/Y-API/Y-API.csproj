@@ -31,4 +31,10 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LogicLayer\YAMS_Logic.csproj" />
+    <ProjectReference Include="..\RepositoryLayer\YAMS_Repository.csproj" />
+    <ProjectReference Include="..\YAMS_Interface\YAMS_Interface.csproj" />
+  </ItemGroup>
+
 </Project>

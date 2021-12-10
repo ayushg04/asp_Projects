@@ -1,4 +1,14 @@
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\YAMS_Data.deps.json
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\YAMS_Data.runtimeconfig.json
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\YAMS_Data.runtimeconfig.dev.json
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\YAMS_Data.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\ref\YAMS_Data.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\bin\Debug\net5.0\YAMS_Data.pdb
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.AssemblyInfoInputs.cache
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.AssemblyInfo.cs
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.csproj.CoreCompileInputs.cache
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\ref\YAMS_Data.dll
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.pdb
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.genruntimeconfig.cache

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Y_MVC.Models;
+using YAMS_Data.MVC;
 
 namespace Y_MVC.Controllers
 {

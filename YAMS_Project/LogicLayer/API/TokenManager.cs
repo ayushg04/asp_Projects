@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using YAMS_Data.API;
+using YAMS_Interface;
 
-namespace Y_API.Models
+namespace YAMS_Logic.API
 {
     public class TokenManager:ITokenManager
     {

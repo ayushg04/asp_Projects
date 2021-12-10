@@ -1,15 +1,14 @@
 ﻿@model Y_MVC.Models.LoginModel
-
-@*@{
+@{
     ViewBag.Title = "Login";
 }
-*@
 
-<body style="background-color: #e5e5e5">
-    @*@using (Html.BeginForm())
-    {*@
+
+
+@{
+    @*using (Html.BeginForm("Login","Account",FormMethod.Post))*@
+    {
         @*@Html.AntiForgeryToken()*@
-
         <div class="form-horizontal" style="text-align: -webkit-center;">
             <div class="form-group">
                 <div class="col-md-10">
@@ -31,7 +30,7 @@
                 </div>
             </div>
             <div style="margin: 12px; -webkit-text-stroke: thick; letter-spacing: 3px;">
-                @Html.ActionLink("FORGOT PASSWORD", "SignUP")
+                @Html.ActionLink("FORGOT PASSWORD", "Home")
             </div>
             <div class="form-group" style=" border: solid; border-radius: 9px; border-color: mediumblue; background-color: mediumblue;">
                 <div class="col-md-offset-2 col-md-10">
@@ -39,10 +38,6 @@
                 </div>
             </div>
         </div>
-    @*
-    }*@
-    <p>
-        This is demo class
-    </p>
-</body>
+    }
+}
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Y_MVC.Models
+namespace YAMS_Data.MVC
 {
     public class LoginModel
     {

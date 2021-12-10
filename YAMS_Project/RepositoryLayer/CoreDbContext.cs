@@ -7,8 +7,9 @@ using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using YAMS_Data.API;
 
-namespace Y_API.Models
+namespace YAMS_Repository
 {
     public class CoreDbContext: IdentityDbContext
     {

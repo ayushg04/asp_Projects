@@ -2622,6 +2622,104 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "YAMS_Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AspNetCoreHero.ToastNotification": "1.1.0",
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "MySql.Data": "8.0.27",
+          "MySql.Data.EntityFrameworkCore": "8.0.22",
+          "MySql.EntityFrameworkCore": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Data.SqlClient": "4.8.3",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0"
+        },
+        "compile": {
+          "bin/placeholder/YAMS_Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAMS_Data.dll": {}
+        }
+      },
+      "YAMS_Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12"
+        },
+        "compile": {
+          "bin/placeholder/YAMS_Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAMS_Interface.dll": {}
+        }
+      },
+      "YAMS_Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AspNetCoreHero.ToastNotification": "1.1.0",
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "MySql.Data": "8.0.27",
+          "MySql.Data.EntityFrameworkCore": "8.0.22",
+          "MySql.EntityFrameworkCore": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Data.SqlClient": "4.8.3",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0",
+          "YAMS_Data": "1.0.0",
+          "YAMS_Interface": "1.0.0",
+          "YAMS_Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/YAMS_Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAMS_Logic.dll": {}
+        }
+      },
+      "YAMS_Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AspNetCoreHero.ToastNotification": "1.1.0",
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "MySql.Data": "8.0.27",
+          "MySql.Data.EntityFrameworkCore": "8.0.22",
+          "MySql.EntityFrameworkCore": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Data.SqlClient": "4.8.3",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0",
+          "YAMS_Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/YAMS_Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAMS_Repository.dll": {}
+        }
       }
     }
   },
@@ -8636,6 +8734,26 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "YAMS_Data/1.0.0": {
+      "type": "project",
+      "path": "../DataLayer/YAMS_Data.csproj",
+      "msbuildProject": "../DataLayer/YAMS_Data.csproj"
+    },
+    "YAMS_Interface/1.0.0": {
+      "type": "project",
+      "path": "../YAMS_Interface/YAMS_Interface.csproj",
+      "msbuildProject": "../YAMS_Interface/YAMS_Interface.csproj"
+    },
+    "YAMS_Logic/1.0.0": {
+      "type": "project",
+      "path": "../LogicLayer/YAMS_Logic.csproj",
+      "msbuildProject": "../LogicLayer/YAMS_Logic.csproj"
+    },
+    "YAMS_Repository/1.0.0": {
+      "type": "project",
+      "path": "../RepositoryLayer/YAMS_Repository.csproj",
+      "msbuildProject": "../RepositoryLayer/YAMS_Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8656,7 +8774,10 @@
       "MySql.EntityFrameworkCore >= 5.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "System.Data.SqlClient >= 4.8.3",
-      "System.IdentityModel.Tokens.Jwt >= 6.15.0"
+      "System.IdentityModel.Tokens.Jwt >= 6.15.0",
+      "YAMS_Interface >= 1.0.0",
+      "YAMS_Logic >= 1.0.0",
+      "YAMS_Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8689,7 +8810,17 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\project\\asp_Projects\\YAMS_Project\\LogicLayer\\YAMS_Logic.csproj": {
+              "projectPath": "C:\\project\\asp_Projects\\YAMS_Project\\LogicLayer\\YAMS_Logic.csproj"
+            },
+            "C:\\project\\asp_Projects\\YAMS_Project\\RepositoryLayer\\YAMS_Repository.csproj": {
+              "projectPath": "C:\\project\\asp_Projects\\YAMS_Project\\RepositoryLayer\\YAMS_Repository.csproj"
+            },
+            "C:\\project\\asp_Projects\\YAMS_Project\\YAMS_Interface\\YAMS_Interface.csproj": {
+              "projectPath": "C:\\project\\asp_Projects\\YAMS_Project\\YAMS_Interface\\YAMS_Interface.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

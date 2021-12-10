@@ -32,8 +32,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\YAMS_Data.csproj" />
-    <ProjectReference Include="..\LogicLayer\YAMS_Logic.csproj" />
-    <ProjectReference Include="..\PresentationLayer\YAMS_Presentation.csproj" />
     <ProjectReference Include="..\YAMS_Interface\YAMS_Interface.csproj" />
   </ItemGroup>
 

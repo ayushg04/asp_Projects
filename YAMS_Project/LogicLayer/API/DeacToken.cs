@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Y_API.Models;
+using YAMS_Interface;
 
-namespace Y_API
+namespace YAMS_Logic.API
 {
     public class deacToken
     {
