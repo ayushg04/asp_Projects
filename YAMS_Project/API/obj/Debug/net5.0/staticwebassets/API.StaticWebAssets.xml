@@ -1,4 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/AspNetCoreHero.ToastNotification" Path="C:\Users\Daffolap-1002\.nuget\packages\aspnetcorehero.toastnotification\1.1.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/YAMS_MVC" Path="C:\Users\Daffolap-1002\source\repos\YAMS_Project\YAMS_MVC\wwwroot\" />
-</StaticWebAssets>
