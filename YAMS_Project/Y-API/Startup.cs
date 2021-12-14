@@ -20,6 +20,7 @@ using YAMS_Logic.API;
 using YAMS_Interface;
 using Microsoft.EntityFrameworkCore;
 using YAMS_Repository;
+using Microsoft.AspNetCore.Http;
 
 namespace Y_API
 {
@@ -37,9 +38,11 @@ namespace Y_API
         {
 
             services.AddScoped<CoreDbContext>();
+            services.AddScoped<DataContext > ();
             services.AddControllers();
-            services.Add(new ServiceDescriptor(typeof(DatabaseConnection), new DatabaseConnection(Configuration.GetConnectionString("UserDB"))));
-            services.AddDbContext<CoreDbContext>(op => op.UseSqlServer(Configuration.GetConnectionString("UserDB")));
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("YAMScns")));
+            services.Add(new ServiceDescriptor(typeof(DatabaseConnection), new DatabaseConnection(Configuration.GetConnectionString("YAMScns"))));
+            services.AddDbContext<CoreDbContext>(op => op.UseSqlServer(Configuration.GetConnectionString("YAMScns")));
             var key = "This is my first test key";
             services.AddAuthentication(x =>
             {
@@ -66,7 +69,7 @@ namespace Y_API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             //loggerFactory.AddDebug();
@@ -76,11 +79,12 @@ namespace Y_API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Y_API v1"));
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
+            
             app.UseAuthorization();
 
 

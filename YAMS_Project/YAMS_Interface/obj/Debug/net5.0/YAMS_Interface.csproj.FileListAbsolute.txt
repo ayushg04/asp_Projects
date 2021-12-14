@@ -1,7 +1,10 @@
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\YAMS_Interface.deps.json
+C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\YAMS_Interface.runtimeconfig.json
+C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\YAMS_Interface.runtimeconfig.dev.json
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\YAMS_Interface.dll
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\ref\YAMS_Interface.dll
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\bin\Debug\net5.0\YAMS_Interface.pdb
+C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.csproj.AssemblyReference.cache
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.GeneratedMSBuildEditorConfig.editorconfig
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.AssemblyInfoInputs.cache
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.AssemblyInfo.cs
@@ -9,3 +12,4 @@ C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interf
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.dll
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\ref\YAMS_Interface.dll
 C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.pdb
+C:\project\asp_Projects\YAMS_Project\YAMS_Interface\obj\Debug\net5.0\YAMS_Interface.genruntimeconfig.cache

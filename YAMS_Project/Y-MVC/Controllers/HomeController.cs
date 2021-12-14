@@ -17,8 +17,13 @@ namespace Y_MVC.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(LoginModel loginModel)
         {
             return View();
         }

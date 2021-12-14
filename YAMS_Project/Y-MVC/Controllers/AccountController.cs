@@ -1,4 +1,5 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,10 +15,10 @@ namespace Y_MVC.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AccountController> _logger;
         private readonly INotyfService _notyf;
         private readonly IJwtAuth jwtAuth;
-        public AccountController(IJwtAuth jwtAuth, ILogger<HomeController> logger, INotyfService notyf)
+        public AccountController(IJwtAuth jwtAuth, ILogger<AccountController> logger, INotyfService notyf)
         {
             this.jwtAuth = jwtAuth;
             _logger = logger;
@@ -29,37 +30,26 @@ namespace Y_MVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(LoginModel loginModel)
+        public IActionResult Login(string username, string password)
         {
-            var token = jwtAuth.Authentication(loginModel.username, loginModel.password);
+            
+            var token = jwtAuth.Authentication(username, password);
             if (token == null)
             {
                 _notyf.Error("Wrong Username or Password", 3);
-                //return Unauthorized();
                 return View();
             }
             _notyf.Success("Successfully Logged In", 3);
-            //return Ok(token);
-            ViewBag.data = token;
-            return RedirectToAction("Home", "Account",token);
+            return RedirectToAction("Index","Dashboard");
+        }
 
-        }
         
-        public IActionResult Home(LoginModel loginModel)
-        {
-            _notyf.Success("Successfully Logged Out", 3);
-            return View();
-        }
         public IActionResult Logout()
         {
             
             //dt.CancelAccessToken();
             return RedirectToAction("Login", "Account");
         }
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
     }
 }

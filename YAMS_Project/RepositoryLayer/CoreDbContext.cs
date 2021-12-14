@@ -17,7 +17,7 @@ namespace YAMS_Repository
         {
         }
 
-        public CoreDbContext(DbContextOptions<CoreDbContext> options)
+        public CoreDbContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -26,8 +26,8 @@ namespace YAMS_Repository
         {
             throw new UnintentionalCodeFirstException();
         }*/
-        public virtual System.Data.Entity.DbSet<UserTable> userTables { get; set; }  
-        public virtual System.Data.Entity.DbSet<Register> Registers { get; set; }
+        public virtual Microsoft.EntityFrameworkCore.DbSet<UserTable> userTables { get; set; }  
+        public virtual Microsoft.EntityFrameworkCore.DbSet<Register> Registers { get; set; }
 
         
     }

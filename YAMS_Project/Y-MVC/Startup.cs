@@ -15,7 +15,6 @@ using System.Text;
 using System.Threading.Tasks;
 using YAMS_Interface;
 using YAMS_Logic.API;
-//using YAMS_Logic.API;
 
 namespace Y_MVC
 {
@@ -31,9 +30,8 @@ namespace Y_MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
 
-            services.AddRazorPages();
+            services.AddMvc();
             services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotyfPosition.TopCenter; });
             services.AddControllersWithViews();
             //Dependency for JWt authentication
@@ -58,6 +56,7 @@ namespace Y_MVC
             services.AddSingleton<IJwtAuth>(new Auth(key));
             //Dependency for toaster message
             
+            
         }
     
 
@@ -77,9 +76,10 @@ namespace Y_MVC
             
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            
+            
             app.UseRouting();
-            //app.MapRazorPages();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -88,6 +88,7 @@ namespace Y_MVC
                     name: "default",
                     pattern: "{controller=Account}/{action=Login}/{id?}");
             });
+
         }
     }
 }
