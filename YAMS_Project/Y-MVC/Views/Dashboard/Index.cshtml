@@ -1,9 +1,32 @@
-﻿@*
+﻿<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login">YAMS Project</a>
+            <a>Dear - Ayush</a>
+            <a>@Html.ActionLink("Logout", "Logout", "Account")</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="nav navbar-nav">
+
+                    @if ((User.Identity.Name) == "ayush")
+                    {
+                        <li><a>Dear - @User.Identity.Name</a></li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+
 <h2>
     welcome to dashboard of the project
 </h2>
-<a class="mdl-navigation__link" href='@Url.Action("Login", "Account")'>Click</a>

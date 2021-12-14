@@ -30,19 +30,17 @@ namespace Y_MVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login(string username,string password)
         {
-            
             var token = jwtAuth.Authentication(username, password);
             if (token == null)
             {
                 _notyf.Error("Wrong Username or Password", 3);
                 return View();
             }
-            _notyf.Success("Successfully Logged In", 3);
-            return RedirectToAction("Index","Dashboard");
+            
+            return RedirectToAction("Index", "Dashboard");
         }
-
         
         public IActionResult Logout()
         {

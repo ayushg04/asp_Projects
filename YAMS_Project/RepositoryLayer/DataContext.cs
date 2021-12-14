@@ -11,6 +11,7 @@ namespace YAMS_Repository
     public class DataContext: DbContext
     {
         public DataContext()
+
         {
         }
 

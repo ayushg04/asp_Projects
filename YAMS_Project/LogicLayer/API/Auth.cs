@@ -38,6 +38,7 @@ namespace YAMS_Logic.API
 
         public string Authentication(string username, string password)
         {
+
             //bool isValid = dbContext.userTables.Any(x => x.username == username && x.password == password);
             if(!(username.Equals(username1) && password.Equals(password1)))
             //if(!isValid)
