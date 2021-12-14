@@ -10,15 +10,11 @@ namespace YAMS_Repository
 {
     public class DataContext: DbContext
     {
-        public DataContext()
-
-        {
-        }
-
-        public DataContext(DbContextOptions options): base(options)
+        public DataContext(DbContextOptions<DataContext> options): base(options)
         {
 
         }
         public DbSet<UserTable> usertables { get; set; }
+        public DbSet<Register> registers { get; set; }
     }
 }

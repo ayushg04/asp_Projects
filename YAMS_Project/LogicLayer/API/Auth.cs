@@ -10,12 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using YAMS_Interface;
 using YAMS_Repository;
+using YAMS_Repository.YAMS_Repository;
 
 namespace YAMS_Logic.API
 {
     public class Auth : IJwtAuth
     {
-        CoreDbContext dbContext = new CoreDbContext();
         private readonly string username1 = "ayush";
         private readonly string password1 = "ash123";
         private readonly string key;
@@ -27,44 +27,46 @@ namespace YAMS_Logic.API
             this.key = key;
         }
 
-        public Auth( ILogger<Auth> logger, CoreDbContext context)
+        public Auth( ILogger<Auth> logger)
         {
             
             _logger = logger;
-            _database = context;
         }
 
         
 
         public string Authentication(string username, string password)
         {
-
-            //bool isValid = dbContext.userTables.Any(x => x.username == username && x.password == password);
-            if(!(username.Equals(username1) && password.Equals(password1)))
-            //if(!isValid)
+            using ( var context = new YAMSContext())
             {
-                return null;
-            }
+                
+                bool isValid = context.UserTables.Any(x => x.Username == username && x.Password == password);
+                if (isValid)
+                {
+                    var tokenHandler = new JwtSecurityTokenHandler();
 
-            var tokenHandler = new JwtSecurityTokenHandler();
+                    var tokenKey = Encoding.ASCII.GetBytes(key);
 
-            var tokenKey = Encoding.ASCII.GetBytes(key);
-
-            var tokenDescriptor = new SecurityTokenDescriptor()
-            {
-                Subject = new ClaimsIdentity(
-                    new Claim[]
+                    var tokenDescriptor = new SecurityTokenDescriptor()
                     {
+                        Subject = new ClaimsIdentity(
+                            new Claim[]
+                            {
                         new Claim(ClaimTypes.Name, username1)
-                    }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
-            };
+                            }),
+                        Expires = DateTime.UtcNow.AddHours(1),
+                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
+                    };
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            
-            return tokenHandler.WriteToken(token);
+                    var token = tokenHandler.CreateToken(tokenDescriptor);
+
+                    return tokenHandler.WriteToken(token);
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
-
     }
 }

@@ -12,3 +12,4 @@ C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.dll
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\ref\YAMS_Data.dll
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.pdb
 C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.genruntimeconfig.cache
+C:\project\asp_Projects\YAMS_Project\DataLayer\obj\Debug\net5.0\YAMS_Data.csproj.AssemblyReference.cache

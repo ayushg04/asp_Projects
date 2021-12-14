@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using YAMS_Interface;
 using YAMS_Logic.API;
+using YAMS_Repository;
 
 namespace Y_MVC
 {
@@ -30,6 +32,8 @@ namespace Y_MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string conStr = this.Configuration.GetConnectionString("MyConn");
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(conStr));
             services.AddRazorPages();
             services.AddMvc();
             services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotyfPosition.TopCenter; });

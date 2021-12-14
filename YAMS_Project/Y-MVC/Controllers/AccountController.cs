@@ -10,6 +10,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using YAMS_Data.MVC;
 using YAMS_Interface;
+using YAMS_Repository;
+using YAMS_Data.API;
+using YAMS_Repository.YAMS_Repository;
 
 namespace Y_MVC.Controllers
 {
@@ -48,9 +51,19 @@ namespace Y_MVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Registers register)
+        public IActionResult Create(YAMS_Repository.YAMS_Repository.Register register)
         {
-            return View();
+            using(var context = new YAMSContext())
+            {
+                if(register.Password != register.ConfirmPassword)
+                {
+                    _notyf.Error("Different Password Given, Please make the password same", 3);
+                    return View();
+                }
+                context.Registers.Add(register);
+                context.SaveChanges();
+                return RedirectToAction("Login");
+            }
         }
         public IActionResult Logout()
         {

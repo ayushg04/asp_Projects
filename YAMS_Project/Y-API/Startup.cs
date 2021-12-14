@@ -36,11 +36,10 @@ namespace Y_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            string conStr = this.Configuration.GetConnectionString("MyConn");
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(conStr));
             services.AddScoped<CoreDbContext>();
-            services.AddScoped<DataContext > ();
             services.AddControllers();
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("YAMScns")));
             services.Add(new ServiceDescriptor(typeof(DatabaseConnection), new DatabaseConnection(Configuration.GetConnectionString("YAMScns"))));
             services.AddDbContext<CoreDbContext>(op => op.UseSqlServer(Configuration.GetConnectionString("YAMScns")));
             var key = "This is my first test key";
