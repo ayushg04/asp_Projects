@@ -190,3 +190,4 @@ C:\project\asp_Projects\YAMS_Project\Y-MVC\obj\Debug\net5.0\ref\Y-MVC.dll
 C:\project\asp_Projects\YAMS_Project\Y-MVC\obj\Debug\net5.0\Y-MVC.pdb
 C:\project\asp_Projects\YAMS_Project\Y-MVC\obj\Debug\net5.0\Y-MVC.genruntimeconfig.cache
 C:\project\asp_Projects\YAMS_Project\Y-MVC\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
+C:\project\asp_Projects\YAMS_Project\Y-MVC\obj\Debug\net5.0\Razor\Views\Account\Create.cshtml.g.cs

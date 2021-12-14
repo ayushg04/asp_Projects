@@ -41,7 +41,17 @@ namespace Y_MVC.Controllers
             
             return RedirectToAction("Index", "Dashboard");
         }
-        
+        [HttpGet]
+        public IActionResult Create()
+        {
+            _notyf.Information("Fill All the Details Correctly.", 3);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Registers register)
+        {
+            return View();
+        }
         public IActionResult Logout()
         {
             

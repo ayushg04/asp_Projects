@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -8,31 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.js"></script>
-    <script type="text/javascript">
-        function submitBtn() {
-            var data = $("#loginForm").serialize();
-            console.log(data);
-            
-            $.ajax({
-                type: 'POST',
-                url: '/Members/Authentication',
-                data: data,
-                success: function (result) {
-                    alert('Successfully recieved data');
-                    console.log(result);
-                },
-                error: function (error) {
-                    
-                    console.log(error);
-                }
-            })
-        }
-    </script>
     <style>
         body {
             background-color: #e5e5e5;
             text-align: -webkit-center;
         }
+
         input {
             width: -webkit-fill-available;
             text-align: center;
@@ -40,17 +20,21 @@
             border: none;
             border-radius: 8px;
         }
-        table{
-            text-align:center;
+
+        table {
+            text-align: center;
         }
-        td{
+
+        td {
             padding: 7px;
         }
+
         img {
-            margin:30px;
+            margin: 30px;
             max-width: 100%;
             height: auto;
         }
+
         .btn {
             border: solid;
             border-radius: 9px;
@@ -60,11 +44,11 @@
     </style>
 </head>
 <body>
-    <div>
+    <div class="row">
         <div class="col-md-10">
             <form id="loginForm" method="post" enctype="multipart/form-data" asp-controller="Account" asp-action="Login">
                 <table>
-                    <tr >
+                    <tr>
                         <td>
                             <img src="~/ycc-logo.png" />
                         </td>
@@ -76,22 +60,24 @@
                         <td><input type="password" id="password" name="password" placeholder="Password" required /></td>
                     </tr>
                     <tr>
-                        <td>
-                            <a class="mdl-navigation__link" href='@Url.Action("Create", "Account")'>FORGOT PASSWORD</a>
-                        </td>
+                        <td><input type="password" id="confirm_password" name="password" placeholder="Password" required /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" id="email" name="email" placeholder="Email" required /></td>
                     </tr>
                     <tr>
                         <td class="col-md-offset-2 col-md-10">
-                        <input class="btn" type="submit" value="CONTINUE" onclick="submitBtn()"  />
+                            <input class="btn" type="submit" value="Submit" />
                         </td>
                     </tr>
-                    
+
                 </table>
 
             </form>
         </div>
     </div>
 </body>
+
 
 </html>
 
