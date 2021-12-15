@@ -16,6 +16,7 @@ namespace Y_API.Controllers
     [ApiController]
     public class MembersController : ControllerBase
     {
+        private readonly ITokenManager _tokenManager;
         private readonly IJwtAuth jwtAuth;
         private readonly List<Member> lstMember = new List<Member>()
         {
@@ -23,9 +24,10 @@ namespace Y_API.Controllers
             new Member {Id=2, Name="gaur" },
             new Member{Id=3, Name="pankaj"}
         };
-        public MembersController(IJwtAuth jwtAuth)
+        public MembersController(IJwtAuth jwtAuth, ITokenManager tokenManager)
         {
             this.jwtAuth = jwtAuth;
+            _tokenManager = tokenManager;
         }
         // GET: api/<MembersController>
         [HttpGet]
@@ -43,7 +45,7 @@ namespace Y_API.Controllers
 
         [AllowAnonymous]
         [HttpPost("authentication")]
-        public IActionResult Authentication(UserCredential usercredential)
+        public IActionResult Authentication([FromBody]UserCredential usercredential)
         {
             var token = jwtAuth.Authentication(usercredential.username, usercredential.password);
             if (token == null)
@@ -51,6 +53,13 @@ namespace Y_API.Controllers
                 return Unauthorized();
             }
             return Ok(token);
+        }
+        [HttpPost("tokens/cancel")]
+        public async Task<IActionResult> CancelAccessToken()
+        {
+            await _tokenManager.DeactivateCurrentAsync();
+
+            return NoContent();
         }
     }
 }

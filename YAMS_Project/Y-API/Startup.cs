@@ -59,7 +59,10 @@ namespace Y_API
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key))
                 };
             });
-
+            services.AddTransient<TokenManagerMiddleware>();
+            services.AddTransient<ITokenManager, TokenManager>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddDistributedRedisCache(r => {r.Configuration = Configuration["redis:connectionString"]});
             services.AddSingleton<IJwtAuth>(new Auth(key));
             services.AddSwaggerGen(c =>
             {
@@ -80,10 +83,11 @@ namespace Y_API
             }
             
             app.UseHttpsRedirection();
-
+            //app.UseMvc();
             app.UseRouting();
             app.UseAuthentication();
-            
+            app.UseMiddleware<TokenManagerMiddleware>();
+
             app.UseAuthorization();
 
 

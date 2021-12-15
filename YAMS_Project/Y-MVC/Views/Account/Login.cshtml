@@ -15,11 +15,11 @@
             
             $.ajax({
                 type: 'POST',
-                url: '/Members/Authentication',
+                url: '/Account/Login',
                 data: data,
-                success: function (result) {
-                    alert('Successfully recieved data');
-                    console.log(result);
+                success: function (data) {
+                    
+                    console.log(data);
                 },
                 error: function (error) {
                     

@@ -1,5 +1,4 @@
 ﻿/*using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.JsonWebTokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +52,7 @@ namespace YAMS_Logic.API
                 .Replace("+", string.Empty)
                 .Replace("=", string.Empty)
                 .Replace("/", string.Empty);
-            jwt.RefreshT.oken = refreshToken;
+            jwt.RefreshToken = refreshToken;
             _refreshTokens.Add(new RefreshToken { Username = username, Token = refreshToken });
 
             return jwt;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using YAMS_Data.API;
 using YAMS_Interface;
 using YAMS_Repository;
 using YAMS_Repository.YAMS_Repository;
@@ -60,7 +61,15 @@ namespace YAMS_Logic.API
 
                     var token = tokenHandler.CreateToken(tokenDescriptor);
 
-                    return tokenHandler.WriteToken(token);
+                    var jwtToken =  tokenHandler.WriteToken(token);
+
+                    var refreshToken = new RefreshToken()
+                    {
+                        Username = username,
+                        Token = token.ToString(),
+                        Revoked = false
+                    };
+                    return jwtToken;
                 }
                 else
                 {
