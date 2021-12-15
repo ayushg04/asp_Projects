@@ -40,7 +40,7 @@ namespace YAMS_Logic.API
             using ( var context = new YAMSContext())
             {
                 
-                bool isValid = context.UserTables.Any(x => x.Username == username && x.Password == password);
+                bool isValid = context.Registers.Any(x => x.Username == username && x.Password == password);
                 if (isValid)
                 {
                     var tokenHandler = new JwtSecurityTokenHandler();
@@ -52,7 +52,7 @@ namespace YAMS_Logic.API
                         Subject = new ClaimsIdentity(
                             new Claim[]
                             {
-                        new Claim(ClaimTypes.Name, username1)
+                        new Claim(ClaimTypes.Name, username)
                             }),
                         Expires = DateTime.UtcNow.AddHours(1),
                         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

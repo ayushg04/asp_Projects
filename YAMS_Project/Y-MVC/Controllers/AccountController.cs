@@ -60,10 +60,16 @@ namespace Y_MVC.Controllers
                     _notyf.Error("Different Password Given, Please make the password same", 3);
                     return View();
                 }
+                if(context.Registers.Any(x => x.Email == register.Email))
+                {
+                    _notyf.Error("Same email id used",3);
+                    return View();
+                }
                 context.Registers.Add(register);
                 context.SaveChanges();
                 return RedirectToAction("Login");
             }
+            
         }
         public IActionResult Logout()
         {
